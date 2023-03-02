@@ -49,10 +49,12 @@ func readViperConfig(appName string) *viper.Viper {
 	v.AutomaticEnv()
 
 	// global defaults
-	
+
 	v.SetDefault("json_logs", false)
 	v.SetDefault("loglevel", "debug")
-	
+	v.SetDefault("port", "8080")
+	v.SetDefault("host", "localhost")
+	v.SetDefault("url", "https://farmanet.minsal.cl/index.php/ws/getLocales")
 
 	return v
 }
